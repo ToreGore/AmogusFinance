@@ -1,12 +1,10 @@
 /* Styles go here */
 .containerA {
     display: grid;
-    grid-template-columns: 0.494fr 0.002fr 0.494fr;
+    grid-template-columns: 0.494fr 0.00199fr 0.00001fr 0.494fr;
     grid-template-rows: 1fr;
     grid-template-areas:
-    "containerLEFT space containerRIGHT";
-
-    margin: 10px;
+    "containerLEFT logo space containerRIGHT";
     padding: 20px;
     height: 100%;
     width: 100%;
@@ -16,15 +14,18 @@
     grid-area: containerLEFT;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-
 }
-.space {
-    grid-area: space;
-    width: 1px;
-    height: 100%;
+
+.logo {
+    grid-area: logo;
+    width: 25px;
+    height: 25px;
+    margin-left: -23px;
+    z-index: 1;
+    align-self: center;
 }
 
 

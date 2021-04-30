@@ -1,31 +1,35 @@
 import React, { Component } from 'react'
-import RightBox from "./components/RightBox/RightBox";
 import { theme } from './styles/theme';
 import { ThemeProvider } from 'styled-components';
-import './App.css'
+import Main from './Main';
+
 class App extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      account: '0x0'
+    constructor(props) {
+        super(props)
+        this.state = {
+            account: '0x0',
+            daiToken: {},
+            dappToken: {},
+            tokenFarm: {},
+            daiTokenBalance: '0',
+            dappTokenBalance: '0',
+            stakingBalance: '0',
+            loading: false
+        }
     }
-  }
+
   render() {
+
+      let content
+      if(this.state.loading) {
+          content = <p id="loader" className="text-center">Loading...</p>
+      } else {
+          content = <Main/>
+      }
     return (
         <ThemeProvider theme={theme}>
-          <div className="containerA" style={{background: theme.background}}>
-
-              <div className="containerLEFT" style={{background: theme.side_container}}>
-              </div>
-
-              <div className="space"/>
-
-              <div className="containerRIGHT"style={{background: theme.side_container}}>
-                  <RightBox></RightBox>
-              </div>
-
-          </div>
+              {content}
         </ThemeProvider>
     );
   }
