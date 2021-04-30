@@ -1,1 +1,40 @@
 /* Styles go here */
+.containerA {
+    display: grid;
+    grid-template-columns: 0.494fr 0.002fr 0.494fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "containerLEFT space containerRIGHT";
+
+    margin: 10px;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.containerLEFT {
+    grid-area: containerLEFT;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+.space {
+    grid-area: space;
+    width: 1px;
+    height: 100%;
+}
+
+
+.containerRIGHT {
+    grid-area: containerRIGHT;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+
+}
+

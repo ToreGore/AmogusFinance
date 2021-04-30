@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import Navbar from './components/Navbar'
+import RightBox from "./components/RightBox/RightBox";
+import { theme } from './styles/theme';
+import { ThemeProvider } from 'styled-components';
 import './App.css'
-
 class App extends Component {
 
   constructor(props) {
@@ -10,29 +11,22 @@ class App extends Component {
       account: '0x0'
     }
   }
-
   render() {
     return (
-      <div>
-        <Navbar account={this.state.account} />
-        <div className="container-fluid mt-5">
-          <div className="row">
-            <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '600px' }}>
-              <div className="content mr-auto ml-auto">
-                <a
-                  href="http://www.dappuniversity.com/bootcamp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                </a>
+        <ThemeProvider theme={theme}>
+          <div className="containerA" style={{background: theme.background}}>
 
-                <h1>Hello, World!</h1>
-
+              <div className="containerLEFT" style={{background: theme.side_container}}>
               </div>
-            </main>
+
+              <div className="space"/>
+
+              <div className="containerRIGHT"style={{background: theme.side_container}}>
+                  <RightBox></RightBox>
+              </div>
+
           </div>
-        </div>
-      </div>
+        </ThemeProvider>
     );
   }
 }
