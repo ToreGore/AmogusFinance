@@ -61,10 +61,10 @@ contract FarmToken {
             // The idea here is to receive an amount of stableTokens proportional to the amount staked
 
             // Can't have less than 0 staked tokens
-            require(balance > 0, "Kinda SUS, where is your balance?");
+            require(user_balance > 0, "Kinda SUS, where is your balance?");
 
             // Transfer stable tokens to this contract for staking
-            amongusToken.transfer(msg.sender, balance * interests);
+            amongusToken.transfer(msg.sender, user_balance * interests);
 
             // Reset staking balance
             stakingBalance[msg.sender] = 0;
