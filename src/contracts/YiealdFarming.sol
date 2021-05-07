@@ -84,35 +84,11 @@ contract YieldFarming {
                 uint balance = deposingBalance[recipient]; 
 
                 //calculate intrest to send to the different users 
-                uint intrest = (balance / total_deposited_balance) / 10; 
+                uint intrest = ((balance / total_deposited_balance) * balance ) / 10; 
 
                 if(balance >0){
                 amongusToken.transfer(recipient, intrest);
                 }
             }
-
-        /*    uint total_balance = 0;
-            //uint first_rate = 10;
-            for (uint i=0; i < deposers.length; i++) {
-                total_balance = total_balance + deposingBalance[deposers[i]];
-            }
-            uint interests = user_balance / total_balance;
-
-            // The idea here is to receive an amount of stableTokens proportional to the amount staked
-
-            // Can't have less than 0 staked tokens
-            require(user_balance > 0, "Kinda SUS, where is your balance?");
-
-            // Transfer stable tokens to this contract for staking
-            amongusToken.transfer(msg.sender, user_balance * interests);
-
-            // Reset staking balance
-            deposingBalance[msg.sender] = 0;
- 
- */
         }
-
-
-
-
 }
