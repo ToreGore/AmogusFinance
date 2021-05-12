@@ -7,7 +7,9 @@ import AmountInput from "./components/AmountInput";
 import './Main.css';
 import {ThemeProvider} from "styled-components";
 
+
 class Main extends Component {
+
     render() {
         return (
             <ThemeProvider theme={theme}>
@@ -15,9 +17,9 @@ class Main extends Component {
 
 
                     <div className="containerLEFT" style={{background: theme.side_container}}>
-                        <BalanceAccount text={"Main B."} balance={window.web3.utils.fromWei(this.props.daiTokenBalance, 'Ether')} currency={"|S|"}/>
-                        <BalanceAccount text={"Investment B."} balance={window.web3.utils.fromWei(this.props.deposingBalance, 'Ether')} currency={"|S|"}/>
-                        <BalanceAccount text={"Reward B."} balance={window.web3.utils.fromWei(this.props.dappTokenBalance, 'Ether')} currency={"|A|"}/>
+                        <BalanceAccount text={"Main B."} balance={window.web3.utils.fromWei(this.props.stableTokenBalance, 'ether')} currency={"|S|"}/>
+                        <BalanceAccount text={"Investment B."} balance={window.web3.utils.fromWei(this.props.deposingBalance, 'ether')} currency={"|S|"}/>
+                        <BalanceAccount text={"Reward B."} balance={window.web3.utils.fromWei(this.props.amongusTokenBalance, 'ether')} currency={"|A|"}/>
                     </div>
 
 

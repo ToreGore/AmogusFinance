@@ -3,9 +3,9 @@ import { theme } from './styles/theme';
 import { ThemeProvider } from 'styled-components';
 import Main from './Main';
 import Web3 from 'web3'
-import DaiToken from './abis/DaiToken.json'
-import DappToken from './abis/DappToken.json'
-import TokenFarm from './abis/TokenFarm.json'
+import  StableToken from '../abis/StableToken.json'
+import AmongusToken from '../abis/AmongusToken.json'
+import FarmToken from '../abis/FarmToken.json'
 
 class App extends Component {
 
@@ -33,39 +33,39 @@ class App extends Component {
 
         //load stableToken
         //get a reference to the contract in the network
-        const daiTokenData = DaiToken.networks[networkId]
-        if(daiTokenData) {
+        const stableTokenData = StableToken.networks[networkId]
+        if(stableTokenData) {
 
             //create a new contract object with the same json interface of the respective smart contract
             //this allows us to interact with smart contracts as if they were JavaScript objects.
-            const daiToken = new web3.eth.Contract(DaiToken.abi, daiTokenData.address)
+            const stableToken = new web3.eth.Contract(StableToken.abi, stableTokenData.address)
 
             //pass the new object to the component state
-            this.setState({ daiToken })
+            this.setState({ stableToken })
 
             //load the balance of the the account using the method "balanceOf" defined in the SC.
-            let daiTokenBalance = await daiToken.methods.balanceOf(this.state.account).call()
-            this.setState({ daiTokenBalance: daiTokenBalance.toString() })
+            let stableTokenBalance = await stableToken.methods.balanceOf(this.state.account).call()
+            this.setState({ stableTokenBalance: stableTokenBalance.toString() })
 
         } else {
             window.alert('DaiToken contract not deployed to detected network.')
         }
 
         // Same procedure for Amongus Token
-        const dappTokenData = DappToken.networks[networkId]
-        if(dappTokenData) {
-            const dappToken = new web3.eth.Contract(DappToken.abi, dappTokenData.address)
-            this.setState({ dappToken })
-            let dappTokenBalance = await dappToken.methods.balanceOf(this.state.account).call()
-            this.setState({ dappTokenBalance: dappTokenBalance.toString() })
+        const amongusTokenData = AmongusToken.networks[networkId]
+        if(amongusTokenData) {
+            const amongusToken = new web3.eth.Contract(AmongusToken.abi, amongusTokenData.address)
+            this.setState({ amongusToken })
+            let amongusTokenBalance = await amongusToken.methods.balanceOf(this.state.account).call()
+            this.setState({ amongusTokenBalance: amongusTokenBalance.toString() })
         } else {
             window.alert('DappToken contract not deployed to detected network.')
         }
 
         // TokenFarm
-        const tokenFarmData = TokenFarm.networks[networkId]
+        const tokenFarmData = FarmToken.networks[networkId]
         if(tokenFarmData) {
-            const tokenFarm = new web3.eth.Contract(TokenFarm.abi, tokenFarmData.address)
+            const tokenFarm = new web3.eth.Contract(FarmToken.abi, tokenFarmData.address)
             this.setState({ tokenFarm })
             let deposingBalance = await tokenFarm.methods.deposingBalance(this.state.account).call()
             this.setState({ deposingBalance: deposingBalance.toString() })
@@ -94,7 +94,7 @@ class App extends Component {
         this.setState({ loading: true })
 
         //wait for approval on the balance account and send the token amount to the given address.
-        this.state.daiToken.methods.approve(this.state.tokenFarm._address, amount).send({ from: this.state.account }).on('transactionHash', (hash) => {
+        this.state.stableToken.methods.approve(this.state.tokenFarm._address, amount).send({ from: this.state.account }).on('transactionHash', (hash) => {
             this.state.tokenFarm.methods.issueTokens(amount).send({ from: this.state.account }).on('transactionHash', (hash) => {
                 this.setState({ loading: false })
             })
@@ -118,12 +118,15 @@ class App extends Component {
         //define state variables valid only inside the component
         this.state = {
             account: '0x0',
-            daiToken: {},
-            dappToken: {},
+
+            stableToken: {},
+            amongusToken: {},
             tokenFarm: {},
-            daiTokenBalance: '0',
-            dappTokenBalance: '0',
+
+            stableTokenBalance: '0',
+            amongusTokenBalance: '0',
             deposingBalance: '0',
+
             loading: true
         }
     }
@@ -136,8 +139,8 @@ class App extends Component {
             content = <p id="loader" className="text-center">Loading...</p>
         } else {
             content = <Main
-                daiTokenBalance={this.state.daiTokenBalance}
-                dappTokenBalance={this.state.dappTokenBalance}
+                stableTokenBalance={this.state.stableTokenBalance}
+                amongusTokenBalance={this.state.amongusTokenBalance}
                 deposingBalance={this.state.deposingBalance}
                 issueTokens={this.issueTokens}
                 getTokens={this.getTokens}
