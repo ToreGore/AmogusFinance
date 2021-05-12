@@ -3,6 +3,7 @@ import {theme} from "./styles/theme";
 import mainLogo from "../assets/amongUS.png";
 import RightBox from "./components/RightBox";
 import BalanceAccount from "./components/BalanceAccount";
+import AmountInput from "./components/AmountInput";
 import './Main.css';
 import {ThemeProvider} from "styled-components";
 
@@ -22,9 +23,10 @@ class Main extends Component {
 
                     <img className="logo"  src={mainLogo}/>
 
-
                     <div className="containerRIGHT"style={{background: theme.side_container}}>
-                        <RightBox></RightBox>
+                        <RightBox>
+                            <AmountInput />
+                        </RightBox>
                     </div>
 
 
