@@ -1,0 +1,41 @@
+/* Styles go here */
+.containerA {
+    display: grid;
+    grid-template-columns: 0.494fr 0.00199fr 0.00001fr 0.494fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "containerLEFT logo space containerRIGHT";
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.containerLEFT {
+    grid-area: containerLEFT;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    grid-area: logo;
+    width: 25px;
+    height: 25px;
+    margin-left: -23px;
+    z-index: 1;
+    align-self: center;
+}
+
+
+.containerRIGHT {
+    grid-area: containerRIGHT;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+
+}
+
