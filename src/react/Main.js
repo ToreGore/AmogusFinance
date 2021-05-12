@@ -15,7 +15,7 @@ class Main extends Component {
 
                     <div className="containerLEFT" style={{background: theme.side_container}}>
                         <BalanceAccount text={"Main B."} balance={window.web3.utils.fromWei(this.props.daiTokenBalance, 'Ether')} currency={"|S|"}/>
-                        <BalanceAccount text={"Investment B."} balance={window.web3.utils.fromWei(this.props.stakingBalance, 'Ether')} currency={"|S|"}/>
+                        <BalanceAccount text={"Investment B."} balance={window.web3.utils.fromWei(this.props.deposingBalance, 'Ether')} currency={"|S|"}/>
                         <BalanceAccount text={"Reward B."} balance={window.web3.utils.fromWei(this.props.dappTokenBalance, 'Ether')} currency={"|A|"}/>
                     </div>
 
