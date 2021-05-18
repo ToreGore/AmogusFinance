@@ -1,6 +1,4 @@
-{
-  "name": "Challenge Task BCOLN Module",
-  "version": "0.1.0",
+{ "version": "0.1.0",
   "description": "DeFi Yield Farming App",
   "author": "Team Amogus",
   "dependencies": {
