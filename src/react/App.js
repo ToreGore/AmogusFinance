@@ -5,7 +5,7 @@ import Main from './Main';
 import Web3 from 'web3'
 import  StableToken from '../abis/StableToken.json'
 import AmongusToken from '../abis/AmongusToken.json'
-import FarmToken from '../abis/FarmToken.json'
+import YieldFarming from '../abis/YieldFarming.json'
 
 class App extends Component {
 
@@ -63,11 +63,11 @@ class App extends Component {
         }
 
         // TokenFarm
-        const tokenFarmData = FarmToken.networks[networkId]
+        const tokenFarmData = YieldFarming.networks[networkId]
         if(tokenFarmData) {
-            const tokenFarm = new web3.eth.Contract(FarmToken.abi, tokenFarmData.address)
+            const tokenFarm = new web3.eth.Contract(YieldFarming.abi, tokenFarmData.address)
             this.setState({ tokenFarm })
-            let deposingBalance = await tokenFarm.methods.deposingBalance(this.state.account).call()
+            let deposingBalance = await YieldFarming.methods.deposingBalance(this.state.account).call()
             this.setState({ deposingBalance: deposingBalance.toString() })
         } else {
             window.alert('TokenFarm contract not deployed to detected network.')
