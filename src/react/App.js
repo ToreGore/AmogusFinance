@@ -13,6 +13,7 @@ class App extends Component {
     async componentWillMount() {
         //It is invoked just before mounting occurs.
         //It is called before render().
+        console.log('componentWillMountcalled')
         await this.loadWeb3()
         await this.loadBlockchainData()
     }
@@ -23,6 +24,7 @@ class App extends Component {
         const web3 = window.web3
 
         //get the accounts from the Ethereum network
+        console.log('Waiting for Accounts')
         const accounts = await web3.eth.getAccounts()
 
         //insert them in the component's state
@@ -67,7 +69,7 @@ class App extends Component {
         if(tokenFarmData) {
             const tokenFarm = new web3.eth.Contract(YieldFarming.abi, tokenFarmData.address)
             this.setState({ tokenFarm })
-            let deposingBalance = await YieldFarming.methods.deposingBalance(this.state.account).call()
+            let deposingBalance = await tokenFarm.methods.deposingBalance(this.state.account).call()
             this.setState({ deposingBalance: deposingBalance.toString() })
         } else {
             window.alert('TokenFarm contract not deployed to detected network.')
@@ -132,8 +134,8 @@ class App extends Component {
     }
 
     render() {
-
         // invoked when a the App component is called. (logic of the return statement)
+        console.log('asdf')
         let content
         if(this.state.loading) {
             content = <p id="loader" className="text-center">Loading...</p>
