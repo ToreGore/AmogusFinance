@@ -95,7 +95,7 @@ class App extends Component {
 
         //wait for approval on the balance account and send the token amount to the given address.
         this.state.stableToken.methods.approve(this.state.tokenFarm._address, amount).send({ from: this.state.account }).on('transactionHash', (hash) => {
-            this.state.tokenFarm.methods.issueTokens(amount).send({ from: this.state.account }).on('transactionHash', (hash) => {
+            this.state.tokenFarm.methods.issueToken(amount).send({ from: this.state.account }).on('transactionHash', (hash) => {
                 this.setState({ loading: false })
             })
         })
