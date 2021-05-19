@@ -132,7 +132,6 @@ class App extends Component {
     }
 
     render() {
-
         // invoked when a the App component is called. (logic of the return statement)
         let content
         if(this.state.loading) {

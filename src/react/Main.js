@@ -21,7 +21,7 @@ class Main extends Component {
                     </div>
 
 
-                    <img className="logo"  src={mainLogo}/>
+                    <img className="logo" alt=""  src={mainLogo}/>
 
                     <div className="containerRIGHT"style={{background: theme.side_container}}>
                         <div className="box" style={{background: theme.box, borderColor: theme.border }}>

@@ -4403,9 +4403,7 @@
   "ast": {
     "absolutePath": "/Users/pietrobonazzi/AmogusFinance/src/contracts/StableToken.sol",
     "exportedSymbols": {
-      "StableToken": [
-        419
-      ]
+      "StableToken": [419]
     },
     "id": 420,
     "license": "GPL-3.0",
@@ -4413,15 +4411,7 @@
     "nodes": [
       {
         "id": 240,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.7",
-          ".0",
-          "<",
-          "0.9",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.7", ".0", "<", "0.9", ".0"],
         "nodeType": "PragmaDirective",
         "src": "37:31:2"
       },
@@ -4432,9 +4422,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 419,
-        "linearizedBaseContracts": [
-          419
-        ],
+        "linearizedBaseContracts": [419],
         "name": "StableToken",
         "nameLocation": "79:11:2",
         "nodeType": "ContractDefinition",
@@ -5146,10 +5134,7 @@
                       "id": 298,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "805:7:2",
                       "typeDescriptions": {
@@ -5992,10 +5977,7 @@
                       "id": 369,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "1326:7:2",
                       "typeDescriptions": {
@@ -6142,10 +6124,7 @@
                       "id": 377,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "1371:7:2",
                       "typeDescriptions": {
@@ -6673,9 +6652,7 @@
   "legacyAST": {
     "absolutePath": "/Users/pietrobonazzi/AmogusFinance/src/contracts/StableToken.sol",
     "exportedSymbols": {
-      "StableToken": [
-        419
-      ]
+      "StableToken": [419]
     },
     "id": 420,
     "license": "GPL-3.0",
@@ -6683,15 +6660,7 @@
     "nodes": [
       {
         "id": 240,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.7",
-          ".0",
-          "<",
-          "0.9",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.7", ".0", "<", "0.9", ".0"],
         "nodeType": "PragmaDirective",
         "src": "37:31:2"
       },
@@ -6702,9 +6671,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 419,
-        "linearizedBaseContracts": [
-          419
-        ],
+        "linearizedBaseContracts": [419],
         "name": "StableToken",
         "nameLocation": "79:11:2",
         "nodeType": "ContractDefinition",
@@ -7416,10 +7383,7 @@
                       "id": 298,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "805:7:2",
                       "typeDescriptions": {
@@ -8262,10 +8226,7 @@
                       "id": 369,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "1326:7:2",
                       "typeDescriptions": {
@@ -8412,10 +8373,7 @@
                       "id": 377,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "1371:7:2",
                       "typeDescriptions": {
@@ -8999,12 +8957,13 @@
         }
       },
       "links": {},
-      "address": "0x8e94F9C4436f69541B7CB73f33b1c08a8A7a47C7",
-      "transactionHash": "0x6ff9024de21fc78ba20d480cc09f194dc1661b7b88a6486b631a0b35b9914522"
+      "address": "0xD2C2458f22Ff5CAe0C613aaC9D41d874323b574c",
+      "transactionHash": "0x0b1344ed376ac35282e9213c085e1f5428db3a85c9724082f90b9b3a3df1bf43"
     }
   },
-  "schemaVersion": "3.4.1",
-  "updatedAt": "2021-05-18T16:04:48.785Z",
+  "schemaVersion": "3.4.0",
+  "updatedAt": "2021-05-18T20:33:12.151Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

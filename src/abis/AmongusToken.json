@@ -4403,9 +4403,7 @@
   "ast": {
     "absolutePath": "/Users/pietrobonazzi/AmogusFinance/src/contracts/AmongusToken.sol",
     "exportedSymbols": {
-      "AmongusToken": [
-        180
-      ]
+      "AmongusToken": [180]
     },
     "id": 181,
     "license": "GPL-3.0",
@@ -4413,12 +4411,7 @@
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          "^",
-          "0.8",
-          ".4"
-        ],
+        "literals": ["solidity", "^", "0.8", ".4"],
         "nodeType": "PragmaDirective",
         "src": "37:23:0"
       },
@@ -4429,9 +4422,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 180,
-        "linearizedBaseContracts": [
-          180
-        ],
+        "linearizedBaseContracts": [180],
         "name": "AmongusToken",
         "nameLocation": "72:12:0",
         "nodeType": "ContractDefinition",
@@ -5143,10 +5134,7 @@
                       "id": 59,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "795:7:0",
                       "typeDescriptions": {
@@ -5989,10 +5977,7 @@
                       "id": 130,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "1316:7:0",
                       "typeDescriptions": {
@@ -6139,10 +6124,7 @@
                       "id": 138,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "1361:7:0",
                       "typeDescriptions": {
@@ -6670,9 +6652,7 @@
   "legacyAST": {
     "absolutePath": "/Users/pietrobonazzi/AmogusFinance/src/contracts/AmongusToken.sol",
     "exportedSymbols": {
-      "AmongusToken": [
-        180
-      ]
+      "AmongusToken": [180]
     },
     "id": 181,
     "license": "GPL-3.0",
@@ -6680,12 +6660,7 @@
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          "^",
-          "0.8",
-          ".4"
-        ],
+        "literals": ["solidity", "^", "0.8", ".4"],
         "nodeType": "PragmaDirective",
         "src": "37:23:0"
       },
@@ -6696,9 +6671,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 180,
-        "linearizedBaseContracts": [
-          180
-        ],
+        "linearizedBaseContracts": [180],
         "name": "AmongusToken",
         "nameLocation": "72:12:0",
         "nodeType": "ContractDefinition",
@@ -7410,10 +7383,7 @@
                       "id": 59,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "795:7:0",
                       "typeDescriptions": {
@@ -8256,10 +8226,7 @@
                       "id": 130,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "1316:7:0",
                       "typeDescriptions": {
@@ -8406,10 +8373,7 @@
                       "id": 138,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        4294967278,
-                        4294967278
-                      ],
+                      "overloadedDeclarations": [4294967278, 4294967278],
                       "referencedDeclaration": 4294967278,
                       "src": "1361:7:0",
                       "typeDescriptions": {
@@ -8993,12 +8957,13 @@
         }
       },
       "links": {},
-      "address": "0xBf20d4F8f516B48d0300A447f7c3c9e7196871b2",
-      "transactionHash": "0x929dc4d4f02de28be3e16c63e9330c85985a0f23717713bdbef35c7a7211e647"
+      "address": "0x657CB3e2526C98df7aB8eF568522cA33C55c0E06",
+      "transactionHash": "0xe3d73c394b5945b0921309dc801cbc8b648dc8ffb79f84b85c76dce5884e9ac0"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-05-18T16:04:48.765Z",
+  "updatedAt": "2021-05-18T20:33:12.157Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

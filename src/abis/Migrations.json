@@ -1315,9 +1315,7 @@
   "ast": {
     "absolutePath": "/Users/pietrobonazzi/AmogusFinance/src/contracts/Migrations.sol",
     "exportedSymbols": {
-      "Migrations": [
-        238
-      ]
+      "Migrations": [238]
     },
     "id": 239,
     "license": "GPL-3.0",
@@ -1325,15 +1323,7 @@
     "nodes": [
       {
         "id": 182,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.7",
-          ".0",
-          "<",
-          "0.9",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.7", ".0", "<", "0.9", ".0"],
         "nodeType": "PragmaDirective",
         "src": "37:31:1"
       },
@@ -1344,9 +1334,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 238,
-        "linearizedBaseContracts": [
-          238
-        ],
+        "linearizedBaseContracts": [238],
         "name": "Migrations",
         "nameLocation": "79:10:1",
         "nodeType": "ContractDefinition",
@@ -1712,9 +1700,7 @@
               "src": "431:109:1",
               "statements": [
                 {
-                  "assignments": [
-                    225
-                  ],
+                  "assignments": [225],
                   "declarations": [
                     {
                       "constant": false,
@@ -1953,9 +1939,7 @@
   "legacyAST": {
     "absolutePath": "/Users/pietrobonazzi/AmogusFinance/src/contracts/Migrations.sol",
     "exportedSymbols": {
-      "Migrations": [
-        238
-      ]
+      "Migrations": [238]
     },
     "id": 239,
     "license": "GPL-3.0",
@@ -1963,15 +1947,7 @@
     "nodes": [
       {
         "id": 182,
-        "literals": [
-          "solidity",
-          ">=",
-          "0.7",
-          ".0",
-          "<",
-          "0.9",
-          ".0"
-        ],
+        "literals": ["solidity", ">=", "0.7", ".0", "<", "0.9", ".0"],
         "nodeType": "PragmaDirective",
         "src": "37:31:1"
       },
@@ -1982,9 +1958,7 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 238,
-        "linearizedBaseContracts": [
-          238
-        ],
+        "linearizedBaseContracts": [238],
         "name": "Migrations",
         "nameLocation": "79:10:1",
         "nodeType": "ContractDefinition",
@@ -2350,9 +2324,7 @@
               "src": "431:109:1",
               "statements": [
                 {
-                  "assignments": [
-                    225
-                  ],
+                  "assignments": [225],
                   "declarations": [
                     {
                       "constant": false,
@@ -2596,12 +2568,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x003da410658d510972aC7eFEA7273a8b835220D7",
-      "transactionHash": "0x2599ecad7e7f08bddd2c96d3c2d3fdaea740dddcf24efcba29e3b42e5e272052"
+      "address": "0x72aCF3a51Fd8c82f7fD51D8B6753035Dd197bcA6",
+      "transactionHash": "0x78d92b9cafe32bae268d79e3aeed179f43f47a2068ab2642f1385b63de6db141"
     }
   },
-  "schemaVersion": "3.4.1",
-  "updatedAt": "2021-05-18T16:04:48.776Z",
+  "schemaVersion": "3.4.0",
+  "updatedAt": "2021-05-18T20:33:12.161Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},
