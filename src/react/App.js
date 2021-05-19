@@ -3,9 +3,9 @@ import { theme } from './styles/theme';
 import { ThemeProvider } from 'styled-components';
 import Main from './Main';
 import Web3 from 'web3'
-import  StableToken from '../abis/StableToken.json'
+import StableToken from '../abis/StableToken.json'
 import AmongusToken from '../abis/AmongusToken.json'
-import FarmToken from '../abis/FarmToken.json'
+import YieldFarming from '../abis/YieldFarming.json'
 
 class App extends Component {
 
@@ -48,7 +48,7 @@ class App extends Component {
             this.setState({ stableTokenBalance: stableTokenBalance.toString() })
 
         } else {
-            window.alert('DaiToken contract not deployed to detected network.')
+            window.alert('StableToken contract not deployed to detected network.')
         }
 
         // Same procedure for Amongus Token
@@ -59,18 +59,18 @@ class App extends Component {
             let amongusTokenBalance = await amongusToken.methods.balanceOf(this.state.account).call()
             this.setState({ amongusTokenBalance: amongusTokenBalance.toString() })
         } else {
-            window.alert('DappToken contract not deployed to detected network.')
+            window.alert('AmongusToken contract not deployed to detected network.')
         }
 
         // TokenFarm
-        const tokenFarmData = FarmToken.networks[networkId]
+        const tokenFarmData = YieldFarming.networks[networkId]
         if(tokenFarmData) {
-            const tokenFarm = new web3.eth.Contract(FarmToken.abi, tokenFarmData.address)
+            const tokenFarm = new web3.eth.Contract(YieldFarming.abi, tokenFarmData.address)
             this.setState({ tokenFarm })
             let deposingBalance = await tokenFarm.methods.deposingBalance(this.state.account).call()
             this.setState({ deposingBalance: deposingBalance.toString() })
         } else {
-            window.alert('TokenFarm contract not deployed to detected network.')
+            window.alert('YieldFarming contract not deployed to detected network.')
         }
 
         this.setState({ loading: false })

@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import {theme} from "./styles/theme";
 import mainLogo from "../assets/amongUS.png";
-import RightBox from "./components/RightBox";
 import BalanceAccount from "./components/BalanceAccount";
-import AmountInput from "./components/AmountInput";
 import './Main.css';
 import {ThemeProvider} from "styled-components";
 
@@ -26,12 +24,37 @@ class Main extends Component {
                     <img className="logo"  src={mainLogo}/>
 
                     <div className="containerRIGHT"style={{background: theme.side_container}}>
-                        <RightBox>
-                            <AmountInput />
-                        </RightBox>
+                        <div className="box" style={{background: theme.box, borderColor: theme.border }}>
+                            <div className="form">
+                                <form
+                                    className="form"
+                                    onSubmit={(event) => {event.preventDefault()
+                                        let amount
+                                        amount = this.input.value.toString()
+                                        amount = window.web3.utils.toWei(amount, 'Ether')
+                                        this.props.issueTokens(amount)}}>
+                                    <input
+                                        class="input"
+                                        type="text"
+                                        ref={(input) => { this.input = input }}
+                                        placeholder="0"
+                                        required />
+                                    <button class="button" type="submit" >INVEST</button>
+                                </form>
+                            </div>
+                            <button
+                                class="button"
+                                type="submit"
+                                onClick={(event) => {
+                                    event.preventDefault()
+                                    this.props.getTokens()
+                                }}>
+                                DISINVEST
+                            </button>
+
+                        </div>
+
                     </div>
-
-
                 </div>
             </ThemeProvider>
         );
