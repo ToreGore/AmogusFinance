@@ -19,6 +19,6 @@ module.exports =  async function(deployer, network, accounts) {
   await amongusToken.transfer(yieldFarming.address, '1000000000000000000000000')
 
   // Trnfer 100 stable Tokens to investor account
-  await stableToken.transfer(accounts[0], '100000000000000000000')
+  await stableToken.transfer(accounts[1], '100000000000000000000')
 
 };

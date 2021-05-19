@@ -32,7 +32,7 @@ class Main extends Component {
                                         let amount
                                         amount = this.input.value.toString()
                                         amount = window.web3.utils.toWei(amount, 'Ether')
-                                        this.props.issueTokens(amount)}}>
+                                        this.props.deposeTokens(amount)}}>
                                     <input
                                         class="input"
                                         type="text"

@@ -89,7 +89,7 @@ class App extends Component {
         }
     }
 
-    issueTokens = (amount) => {
+    deposeTokens = (amount) => {
         //buffer before the action is executed
         this.setState({ loading: true })
 
@@ -141,7 +141,7 @@ class App extends Component {
                 stableTokenBalance={this.state.stableTokenBalance}
                 amongusTokenBalance={this.state.amongusTokenBalance}
                 deposingBalance={this.state.deposingBalance}
-                issueTokens={this.issueTokens}
+                deposeTokens={this.deposeTokens}
                 getTokens={this.getTokens}
             />
         }

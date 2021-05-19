@@ -28,7 +28,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -47,7 +48,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -66,7 +68,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -85,7 +88,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -104,7 +108,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -117,7 +122,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -130,7 +136,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -143,7 +150,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -7211,9 +7219,15 @@
   "ast": {
     "absolutePath": "/Users/Can_Inan/AmogusFinance/src/contracts/YieldFarming.sol",
     "exportedSymbols": {
-      "AmongusToken": [180],
-      "StableToken": [419],
-      "YieldFarming": [666]
+      "AmongusToken": [
+        180
+      ],
+      "StableToken": [
+        419
+      ],
+      "YieldFarming": [
+        666
+      ]
     },
     "id": 667,
     "license": "GPL-3.0",
@@ -7221,12 +7235,17 @@
     "nodes": [
       {
         "id": 421,
-        "literals": ["solidity", "^", "0.8", ".4"],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
         "nodeType": "PragmaDirective",
         "src": "37:23:3"
       },
       {
-        "absolutePath": "/Users/pietrobonazzi/AmogusFinance/src/contracts/AmongusToken.sol",
+        "absolutePath": "/Users/Can_Inan/AmogusFinance/src/contracts/AmongusToken.sol",
         "file": "./AmongusToken.sol",
         "id": 422,
         "nameLocation": "-1:-1:-1",
@@ -7238,7 +7257,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/pietrobonazzi/AmogusFinance/src/contracts/StableToken.sol",
+        "absolutePath": "/Users/Can_Inan/AmogusFinance/src/contracts/StableToken.sol",
         "file": "./StableToken.sol",
         "id": 423,
         "nameLocation": "-1:-1:-1",
@@ -7256,7 +7275,9 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 666,
-        "linearizedBaseContracts": [666],
+        "linearizedBaseContracts": [
+          666
+        ],
         "name": "YieldFarming",
         "nameLocation": "131:12:3",
         "nodeType": "ContractDefinition",
@@ -7914,7 +7935,10 @@
                       "id": 477,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "842:7:3",
                       "typeDescriptions": {
@@ -8644,7 +8668,9 @@
               "src": "1549:542:3",
               "statements": [
                 {
-                  "assignments": [541],
+                  "assignments": [
+                    541
+                  ],
                   "declarations": [
                     {
                       "constant": false,
@@ -8809,7 +8835,10 @@
                       "id": 547,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "1725:7:3",
                       "typeDescriptions": {
@@ -9230,7 +9259,10 @@
                       "id": 580,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "2221:7:3",
                       "typeDescriptions": {
@@ -9258,7 +9290,9 @@
                   "src": "2221:56:3"
                 },
                 {
-                  "assignments": [589],
+                  "assignments": [
+                    589
+                  ],
                   "declarations": [
                     {
                       "constant": false,
@@ -9497,7 +9531,9 @@
                   },
                   "id": 614,
                   "initializationExpression": {
-                    "assignments": [593],
+                    "assignments": [
+                      593
+                    ],
                     "declarations": [
                       {
                         "constant": false,
@@ -9589,7 +9625,9 @@
                     "src": "2725:391:3",
                     "statements": [
                       {
-                        "assignments": [627],
+                        "assignments": [
+                          627
+                        ],
                         "declarations": [
                           {
                             "constant": false,
@@ -9662,7 +9700,9 @@
                         "src": "2743:31:3"
                       },
                       {
-                        "assignments": [633],
+                        "assignments": [
+                          633
+                        ],
                         "declarations": [
                           {
                             "constant": false,
@@ -9734,7 +9774,9 @@
                         "src": "2793:41:3"
                       },
                       {
-                        "assignments": [639],
+                        "assignments": [
+                          639
+                        ],
                         "declarations": [
                           {
                             "constant": false,
@@ -10108,7 +10150,9 @@
                   },
                   "id": 663,
                   "initializationExpression": {
-                    "assignments": [616],
+                    "assignments": [
+                      616
+                    ],
                     "declarations": [
                       {
                         "constant": false,
@@ -10232,9 +10276,15 @@
   "legacyAST": {
     "absolutePath": "/Users/Can_Inan/AmogusFinance/src/contracts/YieldFarming.sol",
     "exportedSymbols": {
-      "AmongusToken": [180],
-      "StableToken": [419],
-      "YieldFarming": [666]
+      "AmongusToken": [
+        180
+      ],
+      "StableToken": [
+        419
+      ],
+      "YieldFarming": [
+        666
+      ]
     },
     "id": 667,
     "license": "GPL-3.0",
@@ -10242,12 +10292,17 @@
     "nodes": [
       {
         "id": 421,
-        "literals": ["solidity", "^", "0.8", ".4"],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
         "nodeType": "PragmaDirective",
         "src": "37:23:3"
       },
       {
-        "absolutePath": "/Users/pietrobonazzi/AmogusFinance/src/contracts/AmongusToken.sol",
+        "absolutePath": "/Users/Can_Inan/AmogusFinance/src/contracts/AmongusToken.sol",
         "file": "./AmongusToken.sol",
         "id": 422,
         "nameLocation": "-1:-1:-1",
@@ -10259,7 +10314,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/pietrobonazzi/AmogusFinance/src/contracts/StableToken.sol",
+        "absolutePath": "/Users/Can_Inan/AmogusFinance/src/contracts/StableToken.sol",
         "file": "./StableToken.sol",
         "id": 423,
         "nameLocation": "-1:-1:-1",
@@ -10277,7 +10332,9 @@
         "contractKind": "contract",
         "fullyImplemented": true,
         "id": 666,
-        "linearizedBaseContracts": [666],
+        "linearizedBaseContracts": [
+          666
+        ],
         "name": "YieldFarming",
         "nameLocation": "131:12:3",
         "nodeType": "ContractDefinition",
@@ -10935,7 +10992,10 @@
                       "id": 477,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "842:7:3",
                       "typeDescriptions": {
@@ -11665,7 +11725,9 @@
               "src": "1549:542:3",
               "statements": [
                 {
-                  "assignments": [541],
+                  "assignments": [
+                    541
+                  ],
                   "declarations": [
                     {
                       "constant": false,
@@ -11830,7 +11892,10 @@
                       "id": 547,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "1725:7:3",
                       "typeDescriptions": {
@@ -12251,7 +12316,10 @@
                       "id": 580,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [4294967278, 4294967278],
+                      "overloadedDeclarations": [
+                        4294967278,
+                        4294967278
+                      ],
                       "referencedDeclaration": 4294967278,
                       "src": "2221:7:3",
                       "typeDescriptions": {
@@ -12279,7 +12347,9 @@
                   "src": "2221:56:3"
                 },
                 {
-                  "assignments": [589],
+                  "assignments": [
+                    589
+                  ],
                   "declarations": [
                     {
                       "constant": false,
@@ -12518,7 +12588,9 @@
                   },
                   "id": 614,
                   "initializationExpression": {
-                    "assignments": [593],
+                    "assignments": [
+                      593
+                    ],
                     "declarations": [
                       {
                         "constant": false,
@@ -12610,7 +12682,9 @@
                     "src": "2725:391:3",
                     "statements": [
                       {
-                        "assignments": [627],
+                        "assignments": [
+                          627
+                        ],
                         "declarations": [
                           {
                             "constant": false,
@@ -12683,7 +12757,9 @@
                         "src": "2743:31:3"
                       },
                       {
-                        "assignments": [633],
+                        "assignments": [
+                          633
+                        ],
                         "declarations": [
                           {
                             "constant": false,
@@ -12755,7 +12831,9 @@
                         "src": "2793:41:3"
                       },
                       {
-                        "assignments": [639],
+                        "assignments": [
+                          639
+                        ],
                         "declarations": [
                           {
                             "constant": false,
@@ -13129,7 +13207,9 @@
                   },
                   "id": 663,
                   "initializationExpression": {
-                    "assignments": [616],
+                    "assignments": [
+                      616
+                    ],
                     "declarations": [
                       {
                         "constant": false,
@@ -13258,12 +13338,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xBAeEF28D0535Cd93F95D13C79D165fdf3bFbE78A",
-      "transactionHash": "0x7e4cec282563fbecf83e5ddb48a5c380dea2b48508764646378f10ee33b5a0f4"
+      "address": "0x6b0A363DaC2f15Bf9D24F2b415ec87bD4A9060F7",
+      "transactionHash": "0x77563445ae82246e938a4b0348fe7e298b8fa6d32149a87b2d317cc3777ec1b3"
     }
   },
   "schemaVersion": "3.4.0",
-  "updatedAt": "2021-05-18T20:33:12.144Z",
+  "updatedAt": "2021-05-19T14:38:38.205Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
