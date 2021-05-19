@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity >=0.7.0 <0.9.0;
+pragma solidity ^0.8.4;
 
 contract StableToken {
-    string  public name = "Stable Token";
-    string  public symbol = "mStableToken";
+    string  public name = "Mock Stable Token";
+    string  public symbol = "mStable";
     uint256 public totalSupply = 1000000000000000000000000; // 1 million tokens
     uint8   public decimals = 18;
 

@@ -1,24 +1,23 @@
-const YieldFarming = artifacts.require("YieldFarming");
-const StableToken = artifacts.require("StableToken");
-const AmongusToken = artifacts.require("AmongusToken");
+const AmogusToken = artifacts.require('AmogusToken')
+const StableToken = artifacts.require('StableToken')
+const YieldFarm = artifacts.require('YieldFarm')
 
-module.exports =  async function(deployer, network, accounts) {
+module.exports = async function(deployer, network, accounts) {
   // Deploy Stable Token
   await deployer.deploy(StableToken)
   const stableToken = await StableToken.deployed()
 
-  // Deploy Amongus Token
-  await deployer.deploy(AmongusToken)
-  const amongusToken = await AmongusToken.deployed()
+  // Deploy Amogus Token
+  await deployer.deploy(AmogusToken)
+  const amogusToken = await AmogusToken.deployed()
 
-  // Deploy YieldFarming contract
-  await deployer.deploy(YieldFarming, amongusToken.address, stableToken.address)
-  const yieldFarming  = await YieldFarming.deployed()
+  // Deploy YieldFarm
+  await deployer.deploy(YieldFarm, amogusToken.address, stableToken.address)
+  const yieldFarm = await YieldFarm.deployed()
 
-  // Transform all tokens to Yieldfarming contranct (1Million)
-  await amongusToken.transfer(yieldFarming.address, '1000000000000000000000000')
+  // Transfer all tokens to YieldFarm (1 million)
+  await amogusToken.transfer(yieldFarm.address, '1000000000000000000000000')
 
-  // Trnfer 100 stable Tokens to investor account
+  // Transfer 100 Stable Tokens to investor
   await stableToken.transfer(accounts[1], '100000000000000000000')
-
-};
+}

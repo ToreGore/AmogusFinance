@@ -4,8 +4,8 @@ import { ThemeProvider } from 'styled-components';
 import Main from './Main';
 import Web3 from 'web3'
 import StableToken from '../abis/StableToken.json'
-import AmongusToken from '../abis/AmongusToken.json'
-import YieldFarming from '../abis/YieldFarming.json'
+import AmogusToken from '../abis/AmogusToken.json'
+import YieldFarm from '../abis/YieldFarm.json'
 
 class App extends Component {
 
@@ -52,9 +52,9 @@ class App extends Component {
         }
 
         // Same procedure for Amongus Token
-        const amongusTokenData = AmongusToken.networks[networkId]
+        const amongusTokenData = AmogusToken.networks[networkId]
         if(amongusTokenData) {
-            const amongusToken = new web3.eth.Contract(AmongusToken.abi, amongusTokenData.address)
+            const amongusToken = new web3.eth.Contract(AmogusToken.abi, amongusTokenData.address)
             this.setState({ amongusToken })
             let amongusTokenBalance = await amongusToken.methods.balanceOf(this.state.account).call()
             this.setState({ amongusTokenBalance: amongusTokenBalance.toString() })
@@ -63,14 +63,14 @@ class App extends Component {
         }
 
         // TokenFarm
-        const tokenFarmData = YieldFarming.networks[networkId]
+        const tokenFarmData = YieldFarm.networks[networkId]
         if(tokenFarmData) {
-            const tokenFarm = new web3.eth.Contract(YieldFarming.abi, tokenFarmData.address)
+            const tokenFarm = new web3.eth.Contract(YieldFarm.abi, tokenFarmData.address)
             this.setState({ tokenFarm })
             let deposingBalance = await tokenFarm.methods.deposingBalance(this.state.account).call()
             this.setState({ deposingBalance: deposingBalance.toString() })
         } else {
-            window.alert('YieldFarming contract not deployed to detected network.')
+            window.alert('YieldFarm contract not deployed to detected network.')
         }
 
         this.setState({ loading: false })
@@ -101,7 +101,7 @@ class App extends Component {
         })
     }
 
-    getTokens = (amount) => {
+    undeposeTokens = (amount) => {
         //buffer before the action is executed
         this.setState({ loading: true })
 
@@ -142,7 +142,7 @@ class App extends Component {
                 amongusTokenBalance={this.state.amongusTokenBalance}
                 deposingBalance={this.state.deposingBalance}
                 deposeTokens={this.deposeTokens}
-                getTokens={this.getTokens}
+                getTokens={this.undeposeTokens}
             />
         }
 

@@ -2,10 +2,9 @@
 
 pragma solidity ^0.8.4;
 
-
-contract AmongusToken {
-    string  public name = "Amongus Token";
-    string  public symbol = "AMONGUS";
+contract AmogusToken {
+    string  public name = "Amogus Token";
+    string  public symbol = "AMOGUS";
     uint256 public totalSupply = 1000000000000000000000000; // 1 million tokens
     uint8   public decimals = 18;
 
